@@ -45,11 +45,11 @@ function playGame() {
         
         // determine if the human won
         } else if ((humanChoice.toLowerCase() === "rock" && computerChoice === "scissors") ||
-        (humanChoice.toLowerCase() === "paper" && computerChoice === "rock") ||
-        (humanChoice.toLowerCase() === "scissors" && computerChoice === "paper")) {
-            humanScore++;
-            console.log("You win, keep it up!");
-            return computerScore;
+            (humanChoice.toLowerCase() === "paper" && computerChoice === "rock") ||
+            (humanChoice.toLowerCase() === "scissors" && computerChoice === "paper")) {
+                humanScore++;
+                console.log("You win, keep it up!");
+                return computerScore;
 
         // determine if the computer won
         } else {
