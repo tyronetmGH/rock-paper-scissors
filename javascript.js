@@ -1,6 +1,10 @@
 //test to make sureJS is working in console
 console.log("Hello World! Welcome to my Rock Paper Scissors game!");
 
+//scoring variables
+let humanScore = 0;
+let computerScore = 0;
+
 // Randomly return one of "rock", "paper", or "scissors" for the computer.
 function getComputerChoice() {
     // Use Math.random to generate a decimal number
