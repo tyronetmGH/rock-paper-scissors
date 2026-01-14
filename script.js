@@ -16,34 +16,34 @@ function playGame() {
         // Use Math.random to generate a decimal number
         let computerChoice = Math.random();
         // Use it to select the outcome based on value range between 0-1
-        //1/3 are rock
+        //1/3 are "rock"
         if (computerChoice < 0.33) {
             return "rock";
         } 
-        //1/3 are paper
+        //1/3 are "paper"
         else if (computerChoice < 0.66) {
             return "paper";
         } 
-        //the remaining 1/3 are scissors
+        //the remaining 1/3 are "scissors"
         else {
             return "scissors";
         }
     }
 
-    //Get the player's selection using the Prompt method
+    //Get the player's selection using 'prompt'
     function getHumanChoice() {
         let humanChoice = prompt("Please enter your Rock Paper Scissors choice: ");
         return humanChoice;
     }   
 
-    //Play a round of rock paper scissors
+    //Score a round of rock-paper-scissors
     function playRound(humanChoice, computerChoice) {
                
         //determine if a round was a tie
         if (humanChoice.toLowerCase() === computerChoice) {
             console.log("Tie, close one!");
         
-        // determine if the human player won
+        // determine if the human won
         } else if ((humanChoice.toLowerCase() === "rock" && computerChoice === "scissors") ||
         (humanChoice.toLowerCase() === "paper" && computerChoice === "rock") ||
         (humanChoice.toLowerCase() === "scissors" && computerChoice === "paper")) {
@@ -60,11 +60,11 @@ function playGame() {
     }
     
     while (round < 5) {
-        //assign choice variables
+        //assign new choice variables
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         
-        //declare the round
+        //declare the round number
         console.log("Round: ", round+1);
 
         //play one round
