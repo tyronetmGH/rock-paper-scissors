@@ -4,9 +4,6 @@ console.log("Hello World! Welcome to my Rock Paper Scissors game!");
 //function to play 5 rounds of RPS
 function playGame() {
     
-    //round counter
-    let round = 0;
-    
     //scoring variables
     let humanScore = 0;
     let computerScore = 0;
@@ -59,7 +56,8 @@ function playGame() {
         }
     }
     
-    while (round < 5) {
+    //for 5 rounds
+    for (round = 0; round < 5; round++) {
         //assign new choice variables
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
@@ -69,9 +67,6 @@ function playGame() {
 
         //play one round
         playRound(humanSelection, computerSelection);
-        
-        //increment the round counter
-        round++;
         
     }
 
